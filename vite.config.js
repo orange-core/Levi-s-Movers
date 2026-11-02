@@ -13,7 +13,9 @@ const pages = [
   "privacy.html"
 ];
 
+// GitHub Pages serves this project from /Levi-s-Movers/, while local development uses the root path.
 export default defineConfig({
+  base: process.env.GITHUB_ACTIONS === "true" ? "/Levi-s-Movers/" : "/",
   // Relative asset paths keep CSS and JS working on GitHub Pages project URLs.
   base: "./",
   build: {
