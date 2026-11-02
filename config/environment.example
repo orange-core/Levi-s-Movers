@@ -1,0 +1,7 @@
+# Configure these as Cloudflare Pages environment variables/secrets.
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+SUPABASE_QUOTES_TABLE=moving_quote_enquiries
+BREVO_API_KEY=
+BREVO_SENDER_EMAIL=
+BREVO_NOTIFY_EMAIL=
