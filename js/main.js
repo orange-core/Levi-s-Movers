@@ -53,3 +53,33 @@ if (nav && !reducedMotion) {
     lastY = currentY;
   }, { passive: true });
 }
+
+// Count-up figures for the homepage proof panel.
+const countNodes = document.querySelectorAll("[data-count]");
+if (countNodes.length) {
+  const animateCount = (node) => {
+    const target = Number(node.dataset.count);
+    const decimals = Number(node.dataset.decimals || 0);
+    const duration = reducedMotion ? 0 : 1500;
+    const start = performance.now();
+    const render = (now) => {
+      const progress = duration === 0 ? 1 : Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      node.textContent = (target * eased).toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+  };
+  const proof = document.querySelector(".proof-section");
+  if (proof && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        countNodes.forEach(animateCount);
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+    observer.observe(proof);
+  } else {
+    countNodes.forEach(animateCount);
+  }
+}
