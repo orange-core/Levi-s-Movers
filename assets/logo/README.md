@@ -1,0 +1,1 @@
+Place the company-approved Levi's Movers logo in this folder. The current site uses a temporary typographic mark until the actual logo file is supplied. Preferred formats: SVG or transparent PNG. Confirm usage rights before public launch.
