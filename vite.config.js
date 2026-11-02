@@ -9,7 +9,8 @@ const pages = [
   "packing-services.html",
   "commercial-moving.html",
   "service-areas.html",
-  "contact.html"
+  "contact.html",
+  "privacy.html"
 ];
 
 export default defineConfig({
