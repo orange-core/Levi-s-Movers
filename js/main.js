@@ -7,19 +7,6 @@ document.documentElement.classList.add("js-ready");
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const menuButton = document.querySelector(".menu-toggle");
-menuButton?.addEventListener("click", () => {
-  const expanded = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!expanded));
-  document.body.classList.toggle("menu-open", !expanded);
-});
-document.querySelectorAll(".site-nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    document.body.classList.remove("menu-open");
-    menuButton?.setAttribute("aria-expanded", "false");
-  });
-});
-
 document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
