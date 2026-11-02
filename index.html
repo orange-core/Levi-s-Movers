@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/navigation.js"></script>
   <script type="module" src="./js/main.js"></script>
 </head>
 <body>
@@ -19,8 +20,8 @@
       <span class="brand__mark"><span class="brand__mark-inner">L</span></span>
       <span class="brand__word">LEVI'S <b>MOVERS</b><small>MOVE WITH CONFIDENCE</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a class="is-active" href="./">Home</a>
       <a href="./about.html">About</a>
       <div class="nav-dropdown"><button class="nav-dropdown__trigger" type="button">Services <span>⌄</span></button><div class="nav-dropdown__menu"><a href="./local-moving.html">Local moving</a><a href="./long-distance.html">Long-distance</a><a href="./packing-services.html">Packing services</a><a href="./commercial-moving.html">Commercial moving</a></div></div>
