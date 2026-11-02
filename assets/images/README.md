@@ -1,0 +1,1 @@
+Place approved, optimized project photography in this folder. Current prototype imagery is loaded from Unsplash remote image URLs and must be reviewed/replaced or licensed appropriately before launch.
