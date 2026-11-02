@@ -14,6 +14,8 @@ const pages = [
 ];
 
 export default defineConfig({
+  // Relative asset paths keep CSS and JS working on GitHub Pages project URLs.
+  base: "./",
   build: {
     rollupOptions: {
       input: Object.fromEntries(
